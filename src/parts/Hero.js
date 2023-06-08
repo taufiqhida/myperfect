@@ -6,6 +6,8 @@ import IconCities from 'assets/images/icons/icon_cities.svg';
 import IconTraveler from 'assets/images/icons/icon_traveler.svg';
 import IconTreasures from 'assets/images/icons/icon_treasure.svg';
 
+import Fade from 'react-reveal/Fade';
+
 import Button from 'elements/Button';
 
 import formatNumber from 'utils/formatNumber';
@@ -19,6 +21,8 @@ export default function Hero(props) {
 
 
   return (
+    <Fade bottom>
+
     <section className='container pt-4'>
         <div className='row align-items-center'>
             <div className='col-auto pr-5' style={{width:530}}>
@@ -48,7 +52,7 @@ export default function Hero(props) {
                             height="36"
                             src={IconTraveler} 
                             alt={`${props.data.travelers} Travelers`}
-                        />
+                            />
                         <h6 className='mt-3'>
                             {formatNumber(props.data.travelers)}{" "} 
                             <span className='text-gray-500 font-weight-light'>
@@ -62,7 +66,7 @@ export default function Hero(props) {
                             height="36"
                             src={IconTreasures} 
                             alt={`${props.data.treasures} Treasure`}
-                        />
+                            />
                         <h6 className='mt-3'>
                             {formatNumber(props.data.treasures)}{" "} 
                             <span className='text-gray-500 font-weight-light'>
@@ -76,7 +80,7 @@ export default function Hero(props) {
                             height="36"
                             src={IconCities} 
                             alt={`${props.data.cities} Cities`}
-                        />
+                            />
                         <h6 className='mt-3'>
                             {formatNumber(props.data.travelers)}{" "} 
                             <span className='text-gray-500 font-weight-light'>Cities</span>
@@ -103,5 +107,6 @@ export default function Hero(props) {
             </div>
         </div>
     </section>
+</Fade>
   )
 }
