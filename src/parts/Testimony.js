@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TestimonyAccent from 'assets/images/testimonial-landingpages-frame.jpg' 
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import Star from 'elements/Star';
 import Button from 'elements/Button';
 
