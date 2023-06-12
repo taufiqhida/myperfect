@@ -1,12 +1,11 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
 
 import Breadcrumb from "elements/Breadcrumb";
 
 export default function PageDetailTitle({ data, breadcrumb }) {
   return (
     <section className="container spacing-sm">
-      <Fade bottom>
+      
         <div className="row align-items-center">
           <div className="col">
             <Breadcrumb data={breadcrumb} />
@@ -19,7 +18,7 @@ export default function PageDetailTitle({ data, breadcrumb }) {
           </div>
           <div className="col"></div>
         </div>
-      </Fade>
+      
     </section>
   );
 }

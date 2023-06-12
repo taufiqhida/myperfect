@@ -1,13 +1,12 @@
 import React from 'react';
 
 import TestimonyAccent from 'assets/images/testimonial-landingpages-frame.jpg' 
-import Fade from "react-reveal/Fade";
 import Star from 'elements/Star';
 import Button from 'elements/Button';
 
 export default function Testimony({data}) {
   return (
-    <Fade buttom>
+    
 
     <section className='container'>
       <div className='row align-items-center'>
@@ -45,6 +44,6 @@ export default function Testimony({data}) {
         </div>
       </div>
     </section>
-              </Fade>
+            
   )
 }
