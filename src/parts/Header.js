@@ -3,14 +3,25 @@ import React from 'react'
 import Button from 'elements/Button'
 import BranIcon from 'parts/IconText'
 import { useLocation } from 'react-router-dom'
-export default function Header() {
+export default function Header(props) {
     const location = useLocation();
     const getNavLinkClass = (path) => {
-      return location.pathname === path ? "active" : ""
-    }
-  return (
-    
+        return location.pathname === path ? "active" : ""
+    };
+    if (props.isCentered)
+        return (
+            <header className='spacing-sm'>
+                <div className='container'>
+                    <nav className='navbar navbar-expand-lg navbar-light'>
+                        <Button className="brand-text-icon mx-auto" href="" type="link">
+                            myPerfect<span className="text-gray-900"> Hotel.</span>
+                        </Button>
+                    </nav>
+                </div>
+            </header>
+        );
 
+    return(
     <header className = "spacing-sm">
         <div className='container'>
             <nav className='navbar navbar-expand-lg navbar-light'>
