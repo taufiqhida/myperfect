@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 
 import propTypes from 'prop-types'
 
 export default function Stepper(props) {
-
     const { steps, initialStep } = props;
     const stepsKeys = Object.keys(steps);
-    
 
     const [CurrentStep, setCurrentStep] = useState(
         stepsKeys.indexOf(initialStep) > -1 ? initialStep : stepsKeys[0]
@@ -19,7 +17,7 @@ export default function Stepper(props) {
     }
 
     function nextStep() {
-        if (+indexStep < +totalStep) setCurrentStep(stepsKeys[indexStep + 1])
+        if (+indexStep < totalStep) setCurrentStep(stepsKeys[indexStep + 1]);
     }
 
     return <>{props.children(prevStep, nextStep, CurrentStep, steps)}</>;

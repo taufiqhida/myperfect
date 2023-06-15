@@ -53,7 +53,7 @@ export default function Text(props) {
                   name={name}
                   type={type}
                   pattern={pattern}
-                  className={["form-control", inputClassName].koin(" ")}
+                  className={["form-control", inputClassName].join(" ")}
                   value={value}
                   placeholder={placeholder}
                   onChange={onChange}
