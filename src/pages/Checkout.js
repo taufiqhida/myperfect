@@ -77,7 +77,7 @@ export default class Checkout extends Component {
         title: "Yeay! Completed",
         description: null,
         content: <Completed />
-      }
+      },
     }
       return(
           <>
@@ -106,7 +106,7 @@ export default class Checkout extends Component {
                             isBlock
                             isPrimary
                             hasShadow
-                            onClick={()=>nextStep()}
+                            onClick={nextStep}
                           >
                             Continue To Booking
                             </Button>
