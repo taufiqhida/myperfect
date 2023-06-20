@@ -51,7 +51,7 @@ export default function Footer() {
                             <Button isExternal type="link" href="tel:+622120232025">021 - 2023 - 2025</Button>
                             </li>
                             <li className='list-group-item'>
-                            <span>Staycation, Purwokerto, Banyumas</span>
+                            <span>myPerfect, Purwokerto, Banyumas</span>
                             </li>
                         </ul>
                 </div>

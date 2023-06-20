@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Breadcrumb from 'elements/Breadcrumb';
+import Header from 'parts/Header';
 
 export default class Example extends Component {
   render() {
@@ -10,17 +10,8 @@ export default class Example extends Component {
   ];
   
 
-    return(
-        <div className="container">
-            <div 
-            className="row align-items-center justify-content-center"
-            style={{height: "100vh"}}
-            >
-                <div className="col-auto">
-                  <Breadcrumb data={breadcumb} />
-                </div>
-            </div>
-        </div>
+    return (
+      <Header {...this.props}></Header>
     )
   }
 }
