@@ -6,7 +6,7 @@ export default function MostPicked(props) {
   return (
       
       <section className='container' ref={props.refMostPicked} >
-          <Fade direction='down'>
+          
               
         <h4 className='mb-3'>MostPicked</h4>
         <div className='container-grid'>
@@ -15,10 +15,10 @@ export default function MostPicked(props) {
                     <div key={`mostpicked-${index}`}
                     className={`item column-4${index===0?" row-2": " row-1"}`}
                     >
-                        <Fade direction='down'>
+                        
 
 
-                            <div className='card card-featured'>
+                            <div  className='card card-featured'>
                                 <div className='tag'>
                                     ${item.price}
                                     <span className='font-weight-light'>per {item.unit}</span>
@@ -44,14 +44,14 @@ export default function MostPicked(props) {
                                 </div>
                             </div>
                                         
-                </Fade>
+                
                     </div>
                         );
                     })
                 }
         </div>
                 
-                </Fade>
+
                 </section>
                 );
             }
