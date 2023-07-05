@@ -4,5 +4,5 @@ import page from './page'
 
 export default combineReducers({
     checkout,
-    page
+    page,
 });

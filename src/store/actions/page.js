@@ -6,8 +6,9 @@ export const fetchPage = (url, page) => (dispatch) => {
         dispatch({
             type: FETCH_PAGE,
             payload: {
-                [page]:response.data
-            }
-        })
-    })
-}
+                [page]: response.data,
+            },
+        });
+        return response.data;
+    });
+};
