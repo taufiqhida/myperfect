@@ -19,7 +19,7 @@ class LandingPage extends Component {
     
     if (!this.props.page.landingPage)
       this.props.fetchPage(
-        'https://admin-myperfect-ba1b35b50c63.herokuapp.com/api/v1/member/landing-page',
+        `${process.env.REACT_APP_HOST}/api/v1/member/landing-page`,
         "landingPage"
       );
   }
@@ -32,7 +32,7 @@ class LandingPage extends Component {
         <Header {...this.props}></Header>
         <Hero refMostPicked={this.refMostPicked} data={page.landingPage.hero}/>
         <MostPicked refMostPicked={this.refMostPicked} data={page.landingPage.mostPicked}/>
-        <Categories data={page.landingPage.categories}/>
+        <Categories data={page.landingPage.category}/>
         <Testimony data={page.landingPage.testimonial}/>
         <Footer />
       </>
