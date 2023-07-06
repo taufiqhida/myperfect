@@ -7,7 +7,7 @@ import FeaturedImage from 'parts/FeaturedImage';
 import PageDetailDescription from 'parts/PageDetailDescription';
 import BookingForm from 'parts/BookingForm';
 import Categories from 'parts/Categories';
-import ItemDetails from "json/itemDetails.json"
+import Activities from "parts/Activities";
 import Testimony from 'parts/Testimony';
 import Footer from 'parts/Footer';
 
@@ -24,6 +24,7 @@ class DetailsPage extends Component {
 
     render() {
         const { page, match } = this.props;
+        console.log(page[match.params.id])
 
         if (!page[match.params.id]) return null;
         const breadcrumb = [
@@ -47,7 +48,7 @@ class DetailsPage extends Component {
                         <div className='col-5'><BookingForm itemDetails={page[match.params.id]} startBooking={this.props.checkoutBooking} /></div>
                     </div>
                 </section>
-                <Categories data={page[match.params.id].Activities}/>
+                <Activities data={page[match.params.id].activityId}/>
                 <Testimony data={page[match.params.id].testimonial} />
                 <Footer/>
             </>
