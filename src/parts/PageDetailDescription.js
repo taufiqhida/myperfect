@@ -6,7 +6,10 @@ export default function PageDetailTitle({data}){
             <h4>About the Place</h4>
             {ReactHtmlParser(data.description)}
             <div className="row" style={{ marginTop: 30 }}>
-                {data.features.map((feature, index) => {
+                {
+                    data.featureId.length === 0
+                        ? "Tidak ada feture"
+                        : data.featureId.map((feature, index) => {
                     return (
                         <div
                             key={`feature-${index}`}
