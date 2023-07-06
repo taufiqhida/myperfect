@@ -47,7 +47,7 @@ class DetailsPage extends Component {
                         <div className='col-5'><BookingForm itemDetails={page[match.params.id]} startBooking={this.props.checkoutBooking} /></div>
                     </div>
                 </section>
-                <Categories data={page[match.params.id].activityId}/>
+                <Categories data={page[match.params.id].Activities}/>
                 <Testimony data={page[match.params.id].testimonial} />
                 <Footer/>
             </>
