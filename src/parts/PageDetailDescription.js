@@ -19,7 +19,7 @@ export default function PageDetailTitle({data}){
                             <img
                                 width="38"
                                 className="d-block mb-2"
-                                src={feature.imageUrl}
+                                src={`${process.env.REACT_APP_HOST}/${feature.imageUrl}`}
                                 alt={feature.name}
                             />{" "}
                             <span>{feature.qty}</span>{" "}

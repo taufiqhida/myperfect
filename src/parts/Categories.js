@@ -27,11 +27,11 @@ export default function Categories({data}) {
                                 </div>
                             )}
                             <figure className='img-wrapper' style={{height: 180}}>
-                                <img src={item.imageId[0] ? `${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`: ""} alt={item.name} className='img-cover'/>
+                                <img src={item.imageId[0] ? `${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`: ""} alt={item.title} className='img-cover'/>
                             </figure>
                                 <div className='meta-wrapper'>
                                     <Button type="link"href={`/properties/${item._id}`} className="stretched-link d-block text-gray-800">
-                                        <h5 className='h4'>{item.name}</h5>
+                                        <h5 className='h4'>{item.title}</h5>
                                     </Button>
                                     <span className='text-gray-500'>
                                         {item.city}, {item.country}
