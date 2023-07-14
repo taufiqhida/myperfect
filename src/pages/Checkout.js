@@ -8,11 +8,12 @@ import Numbering from 'elements/Stepper/Numbering';
 import Meta from 'elements/Stepper/Meta';
 import MainContent from 'elements/Stepper/MainContent';
 import Controller  from 'elements/Stepper/Controller';
-import BookingInformation from 'parts/Checkout/BookingInformation';
-import Payment from 'parts/Checkout/Payment';
-import Completed from 'parts/Checkout/Completed';
 
-import {submitBooking} from 'store/actions/checkout';
+import BookingInformation from "parts/Checkout/BookingInformation";
+import Payment from "parts/Checkout/Payment";
+import Completed from "parts/Checkout/Completed";
+
+import { submitBooking } from "store/actions/checkout";
 
 class Checkout extends Component {
   state = {
@@ -67,7 +68,7 @@ class Checkout extends Component {
   render() {
     const { data } = this.state;
     const { checkout, page } = this.props;
-    console.log(page, data);
+    // console.log(page, data);
     if (!checkout)
       return (
         <div className="container">
@@ -158,7 +159,7 @@ class Checkout extends Component {
                         >
                           Continue to Book
                         </Button>
-                      
+                     
                     )}
                   <Button
                     className="btn"
