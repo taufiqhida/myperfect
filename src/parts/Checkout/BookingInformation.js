@@ -4,7 +4,7 @@ import InputText  from "elements/Form/InputText"
 
 export default function BookingInformation(props) {
     const { data, ItemDetails, checkout } = props;
-    console.log(ItemDetails)
+    
     return (
         <div className='container' style={{ marginBottom: 30 }}>
             <div className='row justify-content-center align-items-center'>
