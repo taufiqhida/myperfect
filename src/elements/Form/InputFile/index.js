@@ -7,7 +7,7 @@ export default function File(props) {
     
     const [FileName, setFileName] = useState("")
     const {
-        value,
+        // value,
         placeholder,
         name,
         accept,

@@ -6,7 +6,7 @@ import PageDetailTitle from 'parts/PageDetailTitle';
 import FeaturedImage from 'parts/FeaturedImage';
 import PageDetailDescription from 'parts/PageDetailDescription';
 import BookingForm from 'parts/BookingForm';
-import Categories from 'parts/Categories';
+// import Categories from 'parts/Categories';
 import Activities from "parts/Activities";
 import Testimony from 'parts/Testimony';
 import Footer from 'parts/Footer';
@@ -19,7 +19,7 @@ class DetailsPage extends Component {
         window.scrollTo(0, 0);
 
         if (!this.props.page[this.props.match.params.id])
-            this.props.fetchPage(`${process.env.REACT_APP_HOST}/api/v1/member/detail-page/${this.props.match.params.id}`,this.props.match.params.id)
+            this.props.fetchPage(`/detail-page/${this.props.match.params.id}`,this.props.match.params.id)
     }
 
     render() {

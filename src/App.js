@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
+import { ToastContainer } from 'react-toastify';
 import 'assets/scss/style.scss';
 import LandingPage from 'pages/LandingPage';
 import Example from 'pages/Example';
@@ -19,6 +19,7 @@ function App() {
         <Route exact path="/example" component={Example}/>
         </Switch>
       </Router>
+      <ToastContainer/>
     </div>
   );
 }

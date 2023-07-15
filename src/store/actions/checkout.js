@@ -1,5 +1,5 @@
 import { CHECKOUT_BOOKING } from "../types";
-import axios from "axios";
+import axios from "configs/axios";
 
 export const checkoutBooking = (payload) => (dispatch) => {
     dispatch({
@@ -8,8 +8,8 @@ export const checkoutBooking = (payload) => (dispatch) => {
     });
 };
 
-export const submitBooking = (payload) => (dispatch) => {
-    return axios.post(`https://admin-myperfect-ba1b35b50c63.herokuapp.com/api/v1/member/booking-page`,
+export const submitBooking = (payload) => () => {
+    return axios.post(`/booking-page`,
         payload,
         { headers: {contentType: "multipart/form-data"}})
 };
